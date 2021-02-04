@@ -1,0 +1,63 @@
+        {% extends 'dash.html' %}
+        {% block content %}
+ 
+
+<div  class='top-nav'>
+
+
+<div class="partner-detail">
+    <h1 style="color: #E0E0E0;"><a href='https://dynamic.brandcrowd.com/asset/logo/59608730-f769-44cc-8d3c-712e883cfe7a/logo?v=4&text=Highlight+Text' class="logo">Influencersclub</a>
+    </h1>
+        <div class="partner-detail-inner">
+
+            <img src="/static/images/circle-dots.png">
+                <h2> Partner with Influencers</h2>
+                <p>Collaborate with influencers that already love your brand. </p>
+                <button type="button"> <a href="/dash?user={{ request.GET.user }}&shop={{ request.GET.shop }}"> Launch </a> </button>
+        </div>
+         <p class="big-partnership">Together, We're the Biggest Partnership Platform in the World:</p>
+</div>
+<center class="div-loader">
+    <div class="loader"></ div>
+    <h3 align="center"><div class="text_msg">loading... Please wait</div></h3>
+</center>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+<script>
+
+    $(document).ready(function(){
+        $(".btn.btn-primary").click(function(){
+            $(".loader").show();
+             $(".text_msg").show();
+             $(".facebook-scrap-form").hide();
+            
+
+        });
+    });
+    </script>
+
+   <!--  <script>
+        $(document).ready(function() {
+        var url = window.location.href;
+        alert(url);
+        if(url == 'https://unlimted-shoping.myshopify.com/admin/apps/crate'){
+
+        }else{
+        var split_val = url.split('?')[1];
+        var split_val2 = split_val.split('=')[1];
+        if(split_val.split('=')[0] == 'data'){
+        var split_val3 = "https://"+split_val2+"/admin/apps/crate/"
+        alert(split_val.split('=')[0]);
+        alert(split_val.split('=')[1]);
+        window.location.replace(split_val3);
+        }
+    }
+    });
+    </script>   -->
+
+
+   {% endblock %}

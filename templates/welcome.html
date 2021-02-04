@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>influencersclub</title>
+</head>
+<body>
+	<h1>
+	influencersclub</h1>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		var url = window.location.href;
+        var split_val = url.split('?')[1];
+        var split_val2 = split_val.split('=')[1];
+        if(split_val.split('=')[0] == 'data'){
+        var split_val3 = split_val2+"/admin/apps/crate"
+        window.location.replace(split_val3);
+        }
+    });
+	</script>
+</body>
+</html>

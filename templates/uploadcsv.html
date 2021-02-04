@@ -1,0 +1,66 @@
+        {% extends 'base_csv.html' %}
+        {% block content %}
+
+
+
+{% if data %}
+
+<a href="/upload_csv?status=status&user={{ request.GET.user }}&shop={{ request.GET.shop }}" class="status">Check status</a>
+<table class="dashboard-table" cellspacing="0">
+
+
+
+    {% for key, values in data.items %}
+    <tr>
+
+    <td>{{key}}</td>
+        <td>{{values}}</td>
+        </tr>
+
+            {% endfor %}
+
+</table>
+
+{% else %}
+
+
+
+    <div class="top4" >
+    <div class="top-nav-dash">
+        <h1 style="color: #E0E0E0;" class="logo"> Influencersclub</a>
+        </h1>
+
+       <form method="post" enctype="multipart/form-data" class="facebook-scrap">
+        {% csrf_token %}
+            
+        <div class="form-group facebook-scrap-form-inner">
+
+
+            <div class="col-md-6">
+        
+        <h2 class="text-center">who should we  tell when we find Influencers ?</h2>
+        <img src="/static/images/csv-2.png" alt="csv" class="csv-img">
+    <div class="facebook-form-content-detail">
+        <input type="file" id="lname" name="csvs" placeholder="upload csv file " required>
+        <input type="submit" value="Upload" name="csv" class="btn btn-primary">
+        </div>
+
+         </div>
+             
+        </div>
+
+       
+       
+    </form>
+
+
+    </div>
+    </div>
+
+  
+
+{% endif %}
+
+
+
+   {% endblock %}

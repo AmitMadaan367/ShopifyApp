@@ -1,0 +1,204 @@
+        {% extends 'dash_base.html' %}
+        {% block content %}
+
+
+
+
+<section class="dasboard-new-design">
+        <div class="main-dashboard">
+            <div class="dashboard-section-left">
+                <h2>Influencersclub</h2>
+                <div class="dashboard-section-left-top">
+
+                    <ul>
+                           <li class="active">
+                            <a href="#">
+                            <span><i class="fa fa-user-o" aria-hidden="true"></i> </span>Influencers
+                        </a>
+                        </li>
+                           <li>
+                            <a href="#">
+                            <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i></span> Invites
+                        </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="dashboard-section-left-bottom">
+                      <ul>
+                       <li>
+                        <a href="#">
+                        <span><i class="fa fa-cog" aria-hidden="true"></i> </span>Settings</li>
+                        </a>
+                       
+                    </ul>
+                </div>
+                
+            </div>
+                <div class="dashboard-section-right">
+                     <div class="dashboard-links-top">
+                        <div class="dashboard-right-links">
+                                <div class="dashboard-right-links-root">
+                                    <div class="dashboard-right-links-root-heading-1">
+                                        <h4>influencers</h4>
+                                        <p>discovered</p>
+                                    </div>
+                                    <div class="dashboard-right-links-root-heading-2">
+                                            {% if dis %}
+                                        <h4>{{ dis }}</h4>
+                                        {% endif %}
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="dashboard-right-links-root">
+                                    <div class="dashboard-right-links-root-heading-1">
+                                        <h4>Customers</h4>
+                                        <p>FROM SHOPIFY</p>
+                                    </div>
+                                    <div class="dashboard-right-links-root-heading-2">
+                                        <div class="main-pink-img">
+                                              <div class="pink-img"></div>
+                                             <div class="pink-img"> </div>
+                                                <div class="pink-img"> </div>
+                                                <div class="pink-img"> </div>
+                                        </div>
+                                        <a href="#" class="connect"> Connect</a>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard-right-links-root">
+                                    <div class="dashboard-right-links-root-heading-1">
+                                         <h4>Subscribers</h4>
+                                        <p>IN Email</p>
+                                    </div>
+                                    <div class="dashboard-right-links-root-heading-2">
+                                        <div class="main-pink-img">
+                                              <div class="pink-img"></div>
+                                             <div class="pink-img"> </div>
+                                                <div class="pink-img"> </div>
+                                                <div class="pink-img"> </div>
+                                        </div>
+                                        <a href="#" class="connect"> Connect</a>
+                                    </div>
+                                </div>
+
+                                <!--<div class="dashboard-right-links-root">
+                                    <div class="dashboard-right-links-root-heading-1">
+                                        <h4>Followers</h4>
+                                        <p>On Social</p>
+                                    </div>
+                                    <div class="dashboard-right-links-root-heading-2">
+                                          <div class="main-pink-img">
+                                              <div class="pink-img"></div>
+                                             <div class="pink-img"> </div>
+                                                <div class="pink-img"> </div>
+                                                <div class="pink-img"> </div>
+                                        </div>
+                                        <a href="#" class="connect"> Connect</a>
+                                    </div>
+                                </div>-->
+                        </div>
+                        <div class="dashboard-left-links">
+                            <h4>Get Social</h4>
+                            <p>Connect your Instagram and Facebook to discover more Influencers! The more profiles you connect, the more Influencers you could find with Carro!</p>
+                            <a href="#" class="connect"> Connect</a>
+                        </div>
+                </div>
+
+                <table class="dashboard-table" cellspacing="0">
+
+<tr>
+        <td class="td-heading">username</td>
+        <td class="td-heading">full_name</td>
+        <td class="td-heading">follower_count</td>
+        <td class="td-heading">following_count</td>
+        <td class="td-heading">media_count</td>
+        <td class="td-heading">biography</td>
+        <td class="td-heading">external_url</td>
+        <td class="td-heading">email</td>
+        <td class="td-heading">category</td>
+    
+    </tr>
+    
+
+{% for df in data %}
+
+   <tr>
+    {% for key, values in df.items %}
+        {% if key == "username" %}
+        <td>{{values}}</td>
+        {% endif %}
+            {% endfor %}
+
+    {% for key, values in df.items %}
+        {% if key == "full_name" %}
+        <td>{{values}}</td>
+        {% endif %}
+            {% endfor %}
+
+    {% for key, values in df.items %}
+{% if key == "follower_count" %}
+        <td>{{values}}</td>
+        {% endif %}
+        {% endfor %}
+
+    {% for key, values in df.items %}
+{% if key == "following_count" %}
+        <td>{{values}}</td>
+        {% endif %}
+        {% endfor %}
+
+{% for key, values in df.items %}
+{% if key == "media_count" %}
+        <td>{{values}}</td>
+        {% endif %}
+        {% endfor %}
+
+{% for key, values in df.items %}
+{% if key == "biography" %}
+        <td>{{values}}</td>
+        {% endif %}
+            {% endfor %}
+
+
+{% for key, values in df.items %}
+{% if key == "external_url" %}
+        <td>{{values}}</td>
+        {% endif %}
+    {% endfor %}
+
+{% for key, values in df.items %}
+{% if key == "email" %}
+        <td>{{values}}</td>
+        {% endif %}
+    {% endfor %}
+
+
+{% for key, values in df.items %}
+{% if key == "category" %}
+        <td>{{values}}</td>
+        {% endif %}
+    {% endfor %}
+
+        </tr>
+
+    {% endfor %}
+
+</table>
+
+   {% endblock %}
+
+
+
+                </div>
+                <div class="dashboard-section-left">
+                        asasd
+                </div>
+        </div>
+</section>
+
+
+
+
+
